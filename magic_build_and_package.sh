@@ -30,18 +30,24 @@ if [ ! -f ../google-desktop-api.key ]; then
   echo "google-api-key-required" > ../google-desktop-api.key
 fi
 
+echo '***** Building *****'
+./mach build
+
 # https://hg.mozilla.org/mozreview/gecko/rev/011224b42a6659b8374bd64cbab411f4ef6bed92#index_header
 # We need to export MOZ_CHROME_MULTILOCALE because that will be used for
 # generating multilocale.txt file (./toolkit/mozapps/installer/packager.mk);
 # Then ./intl/locale/LocaleService.cpp service takes advantage of that (reads multilocale.txt)
 # to define languages put into Services.locale.packagedLocales.
-#export MOZ_CHROME_MULTILOCALE=`ls -1 ../l10n/ | tr "\n" " " | sed 's/ $//g'`
-#for AB_CD in $MOZ_CHROME_MULTILOCALE; do
-#  ./mach build chrome-$AB_CD
-#done
-
-echo '***** Building *****'
-./mach build
+# Once a user set a new locale on Preferences page this will be stored in intl.locale.requested as
+# a string value separated by comma.
+# For example, "intl.locale.requested" "en-US, de" means that the browser interface is displayed in
+# en-US.
+# If we change it via about:config for "intl.locale.requested" "de, en-US" and restart the browser
+# then UI will be shown in de localization.
+export MOZ_CHROME_MULTILOCALE=`ls -1 ../l10n/ | tr "\n" " " | sed 's/ $//g'`
+for AB_CD in $MOZ_CHROME_MULTILOCALE; do
+  ./mach build chrome-$AB_CD
+done
 
 if $CQZ_BUILD_TESTS; then
   echo '***** Building tests *****'
