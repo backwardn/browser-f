@@ -61,6 +61,25 @@ DistributionCustomizer.prototype = {
     return fileExists;
   },
 
+  getDistributedLocales: function DIST_getDistributedLocales() {
+    try {
+      let iniFile = Services.dirsvc.get("XREAppDist", Ci.nsIFile);
+      iniFile.append("distribution.ini");
+
+      let parser = Cc["@mozilla.org/xpcom/ini-parser-factory;1"].
+            getService(Ci.nsIINIParserFactory).
+            createINIParser(iniFile);
+
+      return parser.getString("Strings", "IntlLocaleRequested");
+    } catch (ex) {
+      if (ex != null && ex.result == Cr.NS_ERROR_FILE_NOT_FOUND) {
+        Cu.reportError("getDistributedLocales: Unable to parse distribution.ini - file not found");
+      }
+
+      return '';
+    }
+  },
+
   get _ini() {
     let ini = null;
     try {
