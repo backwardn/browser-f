@@ -34,8 +34,13 @@ array_names = [
     'addonsPublicRoot',
     'addonsPublicIntermediate',
     'addonsStageRoot',
+<<<<<<< HEAD
     'privilegedPackageRoot',
     'cliqzAddonsRoot',
+||||||| merged common ancestors
+    'privilegedPackageRoot',
+=======
+>>>>>>> origin/upstream-releases
 ]
 
 for n in array_names:
