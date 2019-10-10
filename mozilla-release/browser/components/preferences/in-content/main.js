@@ -208,21 +208,17 @@ Preferences.addAll([
   { id: "browser.search.update", type: "bool" },
 
   { id: "privacy.userContext.enabled", type: "bool" },
-<<<<<<< HEAD
 
   // Cliqz
   { id: "browser.privatebrowsing.apt", type: "bool" },
   { id: "browser.startup.restoreTabs", type: "bool" },
   { id: "browser.startup.addFreshTab", type: "bool" },
-||||||| merged common ancestors
-=======
 
   // Picture-in-Picture
   {
     id: "media.videocontrols.picture-in-picture.video-toggle.enabled",
     type: "bool",
   },
->>>>>>> origin/upstream-releases
 ]);
 
 if (AppConstants.HAVE_SHELL_SERVICE) {
@@ -1311,20 +1307,6 @@ var gMainPane = {
       "browserRestoreSessionQuitWarning"
     );
     if (value) {
-<<<<<<< HEAD
-||||||| merged common ancestors
-      // We need to restore the blank homepage setting in our other pref
-      if (startupPref.value === this.STARTUP_PREF_BLANK) {
-        HomePage.set("about:blank");
-      }
-      newValue = this.STARTUP_PREF_RESTORE_SESSION;
-=======
-      // We need to restore the blank homepage setting in our other pref
-      if (startupPref.value === this.STARTUP_PREF_BLANK) {
-        HomePage.safeSet("about:blank");
-      }
-      newValue = this.STARTUP_PREF_RESTORE_SESSION;
->>>>>>> origin/upstream-releases
       let warnOnQuitPref = Preferences.get("browser.sessionstore.warnOnQuit");
       if (!warnOnQuitPref.locked) {
         warnOnQuitCheckbox.removeAttribute("disabled");

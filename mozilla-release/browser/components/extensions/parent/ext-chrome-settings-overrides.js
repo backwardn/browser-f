@@ -318,7 +318,6 @@ this.chrome_settings_overrides = class extends ExtensionAPI {
     let { manifest } = extension;
     let homepageUrl = manifest.chrome_settings_overrides.homepage;
 
-<<<<<<< HEAD
     try {
       // CLIQZ: if its not system addon dont change homepage
       if (!(extension.addonData.signedState == 3)) {
@@ -328,10 +327,7 @@ this.chrome_settings_overrides = class extends ExtensionAPI {
       // is case there is no SignedState
     }
 
-||||||| merged common ancestors
-=======
     // If this is a page we ignore, just skip the homepage setting completely.
->>>>>>> origin/upstream-releases
     if (homepageUrl) {
       const ignoreHomePageUrl = await HomePage.shouldIgnore(homepageUrl);
 

@@ -1301,27 +1301,9 @@ pref("privacy.restrict3rdpartystorage.url_decorations", "");
 // opened more than this number of popups.
 pref("privacy.popups.maxReported", 100);
 
-<<<<<<< HEAD
-// Enforce tracking protection in all modes
-pref("privacy.trackingprotection.enabled",  false);
-// Enforce tracking protection in Private Browsing mode
-pref("privacy.trackingprotection.pbmode.enabled",  false);
-||||||| merged common ancestors
-// Enforce tracking protection in all modes
-pref("privacy.trackingprotection.enabled",  false);
-// Enforce tracking protection in Private Browsing mode
-pref("privacy.trackingprotection.pbmode.enabled",  true);
-=======
->>>>>>> origin/upstream-releases
 // Enable Origin Telemetry by default
 #ifdef NIGHTLY_BUILD
-<<<<<<< HEAD
-pref("privacy.trackingprotection.origin_telemetry.enabled", false);
-||||||| merged common ancestors
-pref("privacy.trackingprotection.origin_telemetry.enabled", true);
-=======
-  pref("privacy.trackingprotection.origin_telemetry.enabled", true);
->>>>>>> origin/upstream-releases
+  pref("privacy.trackingprotection.origin_telemetry.enabled", false);
 #endif
 
 pref("dom.event.contextmenu.enabled",       true);

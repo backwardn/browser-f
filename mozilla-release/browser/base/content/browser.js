@@ -354,7 +354,6 @@ var gURLBarHandler = {
    * Invoked by CustomizationHandler when a customization starts.
    */
   customizeStart() {
-<<<<<<< HEAD
     // CLIQZ-SPECIAL:
     // removeCopyCutController gets triggered in
     // ./mozilla-release/browser/base/content/urlbarBindings.xml destructor
@@ -364,12 +363,7 @@ var gURLBarHandler = {
     // This happens because copyCutController instance can not be found in
     // nsXULControllers.cpp#mControllers (urlbarBindings destructor removes that).
 #if 0
-    if (this._urlbar && this._urlbar.constructor.name == "UrlbarInput") {
-||||||| merged common ancestors
-    if (this._urlbar && this._urlbar.constructor.name == "UrlbarInput") {
-=======
     if (this._urlbar) {
->>>>>>> origin/upstream-releases
       this._urlbar.removeCopyCutController();
     }
 #endif
@@ -2159,18 +2153,9 @@ var gBrowserInit = {
     BookmarkingUI.init();
     BrowserSearch.delayedStartupInit();
     AutoShowBookmarksToolbar.init();
-<<<<<<< HEAD
-#if 0
-    ContentBlocking.init();
-#endif
-||||||| merged common ancestors
-    ContentBlocking.init();
-
-=======
     gProtectionsHandler.init();
     HomePage.init().catch(Cu.reportError);
 
->>>>>>> origin/upstream-releases
     let safeMode = document.getElementById("helpSafeMode");
     if (Services.appinfo.inSafeMode) {
       document.l10n.setAttributes(safeMode, "menu-help-safe-mode-with-addons");
@@ -2648,15 +2633,7 @@ var gBrowserInit = {
       Services.prefs.removeObserver(ctrlTab.prefName, ctrlTab);
       ctrlTab.uninit();
       gBrowserThumbnails.uninit();
-<<<<<<< HEAD
-#if 0
-      ContentBlocking.uninit();
-#endif
-||||||| merged common ancestors
-      ContentBlocking.uninit();
-=======
       gProtectionsHandler.uninit();
->>>>>>> origin/upstream-releases
       FullZoom.destroy();
 
       Services.obs.removeObserver(gIdentityHandler, "perm-changed");
@@ -6575,15 +6552,6 @@ var TabsProgressListener = {
     gBrowser.getNotificationBox(aBrowser).removeTransientNotifications();
 
     FullZoom.onLocationChange(aLocationURI, false, aBrowser);
-<<<<<<< HEAD
-#if 0
-    ContentBlocking.onLocationChange();
-#endif
-||||||| merged common ancestors
-
-    ContentBlocking.onLocationChange();
-=======
->>>>>>> origin/upstream-releases
   },
 
   onLinkIconAvailable(browser, dataURI, iconURI) {

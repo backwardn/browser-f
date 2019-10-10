@@ -719,16 +719,10 @@ var gPrivacyPane = {
         "command",
         gPrivacyPane.updateSubmitHealthReport
       );
-<<<<<<< HEAD
 #if 0
-      this.initOptOutStudyCheckbox();
-||||||| merged common ancestors
-      this.initOptOutStudyCheckbox();
-=======
       if (AppConstants.MOZ_NORMANDY) {
         this.initOptOutStudyCheckbox();
       }
->>>>>>> origin/upstream-releases
       this.initAddonRecommendationsCheckbox();
 #endif
     }
@@ -1723,13 +1717,7 @@ var gPrivacyPane = {
       case "always":
         return Ci.nsICookieService.BEHAVIOR_REJECT;
     }
-<<<<<<< HEAD
-||||||| merged common ancestors
-
     return Ci.nsICookieService.BEHAVIOR_ACCEPT;
-=======
-    return Ci.nsICookieService.BEHAVIOR_ACCEPT;
->>>>>>> origin/upstream-releases
   },
 
 #if 0
@@ -2142,12 +2130,8 @@ var gPrivacyPane = {
     var excepts = document.getElementById("passwordExceptions");
 #if 0
     var generatePasswords = document.getElementById("generatePasswords");
-<<<<<<< HEAD
-#endif
-||||||| merged common ancestors
-=======
     var autofillCheckbox = document.getElementById("passwordAutofillCheckbox");
->>>>>>> origin/upstream-releases
+#endif
 
     if (PrivateBrowsingUtils.permanentPrivateBrowsing) {
       document.getElementById("savePasswords").disabled = true;
@@ -2155,23 +2139,15 @@ var gPrivacyPane = {
       excepts.disabled = true;
 #if 0
       generatePasswords.disabled = true;
-<<<<<<< HEAD
-#endif
-||||||| merged common ancestors
-=======
       autofillCheckbox.disabled = true;
->>>>>>> origin/upstream-releases
+#endif
       return false;
     }
     excepts.disabled = !pref.value;
 #if 0
     generatePasswords.disabled = !pref.value;
-<<<<<<< HEAD
-#endif
-||||||| merged common ancestors
-=======
     autofillCheckbox.disabled = !pref.value;
->>>>>>> origin/upstream-releases
+#endif
 
     // don't override pref value in UI
     return undefined;

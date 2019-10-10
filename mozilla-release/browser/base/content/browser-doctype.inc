@@ -12,19 +12,7 @@
 %downloadsDTD;
 <!ENTITY % placesDTD SYSTEM "chrome://browser/locale/places/places.dtd">
 %placesDTD;
-#ifdef MOZ_SERVICES_SYNC
-<!ENTITY % syncBrandDTD SYSTEM "chrome://browser/locale/syncBrand.dtd">
-%syncBrandDTD;
-<<<<<<< HEAD
-#endif
-<!ENTITY % reportphishDTD SYSTEM "chrome://browser/locale/safebrowsing/report-phishing.dtd">
-%reportphishDTD;
-||||||| merged common ancestors
-<!ENTITY % reportphishDTD SYSTEM "chrome://browser/locale/safebrowsing/report-phishing.dtd">
-%reportphishDTD;
-=======
 <!ENTITY % brandingsDTD SYSTEM "chrome://browser/locale/brandings.dtd">
 %brandingsDTD;
->>>>>>> origin/upstream-releases
 <!ENTITY % editBookmarkOverlayDTD SYSTEM "chrome://browser/locale/places/editBookmarkOverlay.dtd">
 %editBookmarkOverlayDTD;

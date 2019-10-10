@@ -1485,15 +1485,9 @@ var remove = async function(db, { guids, urls }, onResult = null) {
   let onResultData = onResult ? [] : null;
   let pages = [];
   let hasPagesToRemove = false;
-<<<<<<< HEAD
-  await db.execute(query, null, onTableRow);
+  await db.execute(query, params, onTableRow);
 
   function onTableRow(row) {
-||||||| merged common ancestors
-  await db.execute(query, null, function(row) {
-=======
-  await db.execute(query, params, function(row) {
->>>>>>> origin/upstream-releases
     let hasForeign = row.getResultByName("foreign_count") != 0;
     if (!hasForeign) {
       hasPagesToRemove = true;

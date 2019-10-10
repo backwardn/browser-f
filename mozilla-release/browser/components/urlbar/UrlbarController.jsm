@@ -581,14 +581,8 @@ class UrlbarController {
    * @param {string} name Name of the notification.
    * @param {object} params Parameters to pass with the notification.
    */
-<<<<<<< HEAD
-  _notify(name, ...params) {
-#if 0
-||||||| merged common ancestors
-  _notify(name, ...params) {
-=======
   notify(name, ...params) {
->>>>>>> origin/upstream-releases
+#if 0
     for (let listener of this._listeners) {
       // Can't use "in" because some tests proxify these.
       if (typeof listener[name] != "undefined") {

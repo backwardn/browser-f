@@ -5,11 +5,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-<<<<<<< HEAD
-var EXPORTED_SYMBOLS = ["Dictionary", "Extension", "ExtensionData", "Langpack", "getExtensionUUID"];
-||||||| merged common ancestors
-var EXPORTED_SYMBOLS = ["Dictionary", "Extension", "ExtensionData", "Langpack"];
-=======
 var EXPORTED_SYMBOLS = [
   "Dictionary",
   "Extension",
@@ -17,8 +12,8 @@ var EXPORTED_SYMBOLS = [
   "Langpack",
   "Management",
   "UninstallObserver",
+  "getExtensionUUID",
 ];
->>>>>>> origin/upstream-releases
 
 /* exported Extension, ExtensionData */
 

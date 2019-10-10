@@ -485,6 +485,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
   Corroborate: "resource://gre/modules/Corroborate.jsm",
   Discovery: "resource:///modules/Discovery.jsm",
   ExtensionsUI: "resource:///modules/ExtensionsUI.jsm",
+  // CLIQZ-SPECIAL: do we really need FirefoxMonitor?
   FirefoxMonitor: "resource:///modules/FirefoxMonitor.jsm",
   FxAccounts: "resource://gre/modules/FxAccounts.jsm",
   HomePage: "resource:///modules/HomePage.jsm",
@@ -2001,13 +2002,9 @@ BrowserGlue.prototype = {
     if (pService.createdAlternateProfile) {
       this._showNewInstallModal();
     }
-<<<<<<< HEAD
 #endif
-||||||| merged common ancestors
-=======
 
     FirefoxMonitor.init();
->>>>>>> origin/upstream-releases
   },
 
   /**
@@ -2158,11 +2155,6 @@ BrowserGlue.prototype = {
     Services.tm.idleDispatchToMainThread(() => {
       TabUnloader.init();
     });
-<<<<<<< HEAD
-#if 0
-||||||| merged common ancestors
-
-=======
 
     Services.tm.idleDispatchToMainThread(() => {
       if (Services.prefs.getBoolPref("corroborator.enabled", false)) {
@@ -2170,7 +2162,7 @@ BrowserGlue.prototype = {
       }
     });
 
->>>>>>> origin/upstream-releases
+#if 0
     // Marionette needs to be initialized as very last step
     Services.tm.idleDispatchToMainThread(() => {
       Services.obs.notifyObservers(null, "marionette-startup-requested");

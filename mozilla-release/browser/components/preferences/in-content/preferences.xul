@@ -201,36 +201,18 @@
             hidden="true"/>
         </hbox>
         <vbox id="mainPrefPane">
-<<<<<<< HEAD
-#include searchResults.xul
-#include main.xul
-#if 0
-  #include home.xul
-#endif
-#include search.xul
-#include privacy.xul
-#include containers.xul
-#if MOZ_SERVICES_SYNC
-  #include sync.xul
-#endif
-#include connect.xul
-||||||| merged common ancestors
-#include searchResults.xul
-#include main.xul
-#include home.xul
-#include search.xul
-#include privacy.xul
-#include containers.xul
-#include sync.xul
-=======
 #include searchResults.inc.xul
 #include main.inc.xul
-#include home.inc.xul
+#if 0
+  #include home.inc.xul
+#endif
 #include search.inc.xul
 #include privacy.inc.xul
 #include containers.inc.xul
-#include sync.inc.xul
->>>>>>> origin/upstream-releases
+#if MOZ_SERVICES_SYNC
+  #include sync.inc.xul
+#endif
+#include connect.xul
         </vbox>
       </vbox>
     </vbox>
