@@ -935,17 +935,9 @@ content-blocking-etp-standard-desc = Balanced for protection and performance. Pa
 content-blocking-etp-strict-desc = Stronger protection, but may cause some sites or content to break.
 content-blocking-etp-custom-desc = Choose which trackers and scripts to block.
 
-<<<<<<< HEAD
-content-blocking-private-trackers = Known trackers only in Forget Mode
-content-blocking-third-party-cookies = Third-party tracking cookies
-||||||| merged common ancestors
-content-blocking-private-trackers = Known trackers only in Private Windows
-content-blocking-third-party-cookies = Third-party tracking cookies
-=======
 content-blocking-private-windows = Tracking content in Private Windows
 content-blocking-cross-site-tracking-cookies = Cross-site tracking cookies
 content-blocking-social-media-trackers = Social media trackers
->>>>>>> origin/upstream-releases
 content-blocking-all-cookies = All cookies
 content-blocking-unvisited-cookies = Cookies from unvisited sites
 content-blocking-all-windows-tracking-content = Tracking content in all windows
