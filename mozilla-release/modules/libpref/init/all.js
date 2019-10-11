@@ -149,7 +149,7 @@ pref("security.webauth.webauthn_enable_softtoken", false);
 #endif
 
 pref("security.ssl.errorReporting.enabled", true);
-pref("security.ssl.errorReporting.url", "https://incoming.telemetry.mozilla.org/submit/sslreports/");
+pref("security.ssl.errorReporting.url", "https://reports.cliqz.com/submit/sslreports/");
 pref("security.ssl.errorReporting.automatic", false);
 
 // Impose a maximum age on HPKP headers, to avoid sites getting permanently
@@ -5393,7 +5393,8 @@ pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
   pref("datareporting.policy.currentPolicyVersion", 2);
   pref("datareporting.policy.minimumPolicyVersion", 1);
   pref("datareporting.policy.minimumPolicyVersion.channel-beta", 2);
-  pref("datareporting.policy.firstRunURL", "https://www.mozilla.org/privacy/firefox/");
+  // CLIQZ-SPECIAL: removed in Cliqz
+  pref("datareporting.policy.firstRunURL", "");
 #endif
 
 #ifdef MOZ_SERVICES_HEALTHREPORT
