@@ -7,7 +7,6 @@ with Files("**"):
 
 EXTRA_JS_MODULES += [
     'UrlbarContextualTip.jsm',
-    'UrlbarController.jsm',
     'UrlbarEventBufferer.jsm',
     'UrlbarInput.jsm',
     'UrlbarMuxerUnifiedComplete.jsm',

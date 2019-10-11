@@ -7244,6 +7244,7 @@
   },
   "FX_MIGRATION_ADDONS_IMPORT_MS": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox"],
     "bug_numbers": [1289436],
     "alert_emails": ["gijs@mozilla.com"],
     "expires_in_version": "65",
@@ -7256,6 +7257,7 @@
   },
   "FX_MIGRATION_COOKIES_IMPORT_MS": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox"],
     "bug_numbers": [1289436],
     "alert_emails": ["gijs@mozilla.com"],
     "expires_in_version": "65",
@@ -7307,6 +7309,7 @@
   },
   "FX_MIGRATION_ADDONS_JANK_MS": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox"],
     "bug_numbers": [1338522],
     "alert_emails": ["dao@mozilla.com"],
     "expires_in_version": "65",
@@ -7319,6 +7322,7 @@
   },
   "FX_MIGRATION_COOKIES_JANK_MS": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox"],
     "bug_numbers": [1338522],
     "alert_emails": ["dao@mozilla.com"],
     "expires_in_version": "65",
@@ -14395,6 +14399,7 @@
   },
   "AUTO_FORGET_TAB_NOTIFICATION_STATES": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox"],
     "alert_emails": [],
     "expires_in_version": "never",
     "bug_numbers": [],
@@ -15470,6 +15475,7 @@
   },
   "REPORT_DECEPTIVE_SITE": {
     "record_in_processes": ["main", "content"],
+    "products": ["firefox", "geckoview"],
     "alert_emails": [],
     "expires_in_version": "never",
     "bug_numbers": [],
