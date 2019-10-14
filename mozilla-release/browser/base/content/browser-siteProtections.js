@@ -1263,12 +1263,14 @@ var gProtectionsHandler = {
       "tracking-protection-icon-animatable-image"
     ));
   },
+#if 0
   get appMenuLabel() {
     delete this.appMenuLabel;
     return (this.appMenuLabel = document.getElementById(
       "appMenu-protection-report-text"
     ));
   },
+#endif
   get _protectionsIconBox() {
     delete this._protectionsIconBox;
     return (this._protectionsIconBox = document.getElementById(
@@ -1499,8 +1501,10 @@ var gProtectionsHandler = {
     gProtectionsHandler._protectionsPopupSendReportLearnMore.href =
       baseURL + "blocking-breakage";
 
+#if 0
     this.appMenuLabel.setAttribute("value", this.strings.appMenuTitle);
     this.appMenuLabel.setAttribute("tooltiptext", this.strings.appMenuTooltip);
+#endif
 
     // Add an observer to observe that the history has been cleared.
     Services.obs.addObserver(this, "browser:purge-session-history");
